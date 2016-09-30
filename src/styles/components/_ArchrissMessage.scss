@@ -1,0 +1,27 @@
+.ArchrissMessage {
+    padding: 50px 20px;
+    text-align: center;
+
+    &--title {
+        position: relative;
+        @include font-title;
+        text-transform: uppercase;
+
+        &::after {
+            content: '';
+
+            display: block;
+            width: 30px;
+            height: 1px;
+            margin: 16px auto 28px;
+
+            background-color: $color-black;
+        }
+    }
+
+    &--message {
+        color: $color-blue;
+        @include font-size(15px);
+        line-height: $base-line-height;
+    }
+}
