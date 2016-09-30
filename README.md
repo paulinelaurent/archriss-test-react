@@ -62,8 +62,8 @@ Petite particularité : l'intégration du **live reload**. En somme : quand un f
 #### Contraintes de développement
 
 Dossiers de travail :
-* `src/components` // Composants et styles associés
-* `src/layouts/CoreLayout` // Structure de la page
+* `src/index.html` // Chargement de dépendances en ligne
+* `src/components` // Composants React
 
 [Babel](https://babeljs.io/), présent dans le projet, permet d'écrire indifféremment le code en JavaScript ES5, 6 ou 7 et de compiler le tout dans une version compatible tous navigateurs.
 
@@ -73,10 +73,8 @@ Ce processus est automatique et ne requiert aucune action spécifique. Vous pouv
 #### Contraintes d'intégration
 
 Dossiers de travail :
-* `src/components` // Composants et styles associés
-* `src/layouts/CoreLayout` // Structure de la page
-* `src/static` // Images, icônes...
-* `src/styles` // Styles globaux
+* `src/styles/base` // Styles globaux, librairies, mixins...
+* `src/styles/components` // Styles associés à chaque composant React
 
 L'intégration doit impérativement être **responsive** et donc pouvoir s'adapter à différentes largeur d'écran. Il n'est par contre attendu ni modifications du layout (pas de réorganisation des blocs), ni de travail au pixel près.
 
