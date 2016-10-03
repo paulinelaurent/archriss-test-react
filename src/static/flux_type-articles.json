@@ -1,0 +1,84 @@
+/**
+ * Liste des articles de l'application.
+ * La première image renseignée dans le champ "images" servira d'illustration pour l'article.
+ */
+
+{
+    "lastUpdate": "Wed May 25 2016 16:11:24 GMT+0200 (CEST)", // Date de dernière modification du flux
+    "list": [{
+        "_id": "identifiant-unique-article",
+        "pubDate": "Wed May 25 2016 09:50:32 GMT+0200 (CEST)",
+        "lastUpdate": "Wed May 25 2016 16:11:24 GMT+0200 (CEST)",
+        "title": "Titre de l'article",
+        "category": {
+            "ids": ["culture", "emploi", "bon-plan"], // identifiants des différentes catégories pour filtrage
+            "title": "Culture" // Nom en toutes lettres de la première catégorie
+        },
+        "subtitle": "Sous-titre de l'article",
+        "summary": "Résumé de l'article",
+        "content": "<p>Contenu HTML nettoyé, sans aucun attribut (ni style, ni classe, etc), venant d'un RTE.</p>",
+        "location": {
+            "title": "Nom du lieu",
+            "latitude": 43.5804125,
+            "longitude": 5.4690584
+        },
+        "calendarDate": [{
+            "startDate": "Wed May 25 2016 14:00:00 GMT+0200",
+            "endDate": "Wed May 25 2016 18:00:00 GMT+0200"
+        }, {
+            "startDate": "Wed May 28 2016 12:00:00 GMT+0200",
+            "endDate": "Wed May 28 2016 13:00:00 GMT+0200"
+        }],
+        "related": [{
+            "_id": "identifiant-article-lié",
+            "title": "Titre article lié",
+            "pubDate": "Wed May 25 2016 16:11:24 GMT+0200",
+            "category": "Culture",
+            "thumbnail": "http://gard.fr/article/article1/image1-thumb.jpg",
+        }, {
+            "_id": "identifiant-article-lié-2",
+            "title": "Titre article lié 2",
+            "pubDate": "Wed May 25 2016 16:11:24 GMT+0200",
+            "category": "Emploi",
+            "thumbnail": "http://gard.fr/article/article1/image1-thumb.jpg",
+        }],
+        "contact": {
+            "name": "Nom du contact",
+            "infos": "Infos complémentaires",
+            "tel": "+334 90 90 90 90",
+            "mail": "contact@test.fr",
+            "url": "http://liencontact.fr",
+            "address": {
+                "title": "Descriptif de l'adresse",
+                "label": "Adresse du contact",
+                "zip": "13100",
+                "town": "Ville",
+                "latitude": 43.5804125,
+                "longitude": 5.4690584
+            }
+        },
+        "images": [{
+            "url": "http://gard.fr/article/article1/image.jpg?[width]",
+            "thumbnail": "http://gard.fr/article/article1/image1-thumb.jpg",
+            "caption": "Description de l'image 1"
+        }, {
+            "url": "http://gard.fr/article/article1/image2.jpg",
+            "thumbnail": "http://gard.fr/article/article2/image2-thumb.jpg",
+            "caption": "Description de l'image 2"
+        }],
+        "videos": [{
+            "title": "Titre vidéo",
+            "type": "youtube",
+            "url": "https://www.youtube.com/watch?v=fDGwzP2DKB8",
+            "description": "Description vidéo",
+            "thumbnail": "https://img.youtube.com/vi/fDGwzP2DKB8/hqdefault.jpg"
+        }, {
+            "title": "Seconde vidéo",
+            "type": "dailymotion",
+            "url": "http://www.dailymotion.com/video/x3utole_gaz-de-schiste-forte-mobilisation-dans-le-gard_news",
+            "description": "Description vidéo",
+            "thumbnail": "http://s1.dmcdn.net/T2dYi/320x240-irK.jpg"
+        }]
+    },
+    ...]
+}
