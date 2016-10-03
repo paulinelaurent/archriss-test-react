@@ -11,6 +11,7 @@ La structure originelle est celle de ce [starter kit](https://github.com/davezuk
 1. [Objectif](#objectif)
 1. [Prérequis](#prerequis)
 1. [Instructions](#instructions)
+1. [Aller plus loin](#aller-plus-loin)
 1. [Critères de notation](#criteres-de-notation)
 1. [Encouragements](#encouragements)
 1. [Contact](#contact)
@@ -21,6 +22,12 @@ La structure originelle est celle de ce [starter kit](https://github.com/davezuk
 Le but est de recréer **une petite partie** de la page ci-dessous sous forme de composants React et d'intégration HTML.
 
 Vous êtes **totalement libres quant aux éléments et blocs que vous choisissez de réaliser**. Il peut s'agir uniquement du header et du corps d'article, des blocs 'Photos' et 'Vidéos', des blocs 'Contact' et 'À lire aussi', etc.
+
+Pour ceux qui souhaiteraient pousser plus loin les développements, et ainsi mettre en valeur leurs compétences techniques, nous vous proposons l'intégration **optionnelle** de [fonctionnalités spécifiques](#aller-plus-loin).
+
+> **IMPORTANT** : ce projet a été créé spécifiquement dans le but de tester vos aptitudes et ne constitue en aucune manière un moyen détourné de vous faire travailler "gratuitement" pour le compte d'Archriss.
+>
+> Nous vous donnons l'assurance que votre travail **ne sera pas** exploité à la suite de ce test.
 
 [![Image © Archriss](http://i.imgur.com/YFsDz6Cl.jpg)](http://i.imgur.com/YFsDz6C.jpg)
 
@@ -62,8 +69,8 @@ Petite particularité : l'intégration du **live reload**. En somme : quand un f
 #### Contraintes de développement
 
 Dossiers de travail :
-* `src/index.html` // Chargement de dépendances en ligne
 * `src/components` // Composants React
+* `src/index.html` // Modification du <head>
 
 [Babel](https://babeljs.io/), présent dans le projet, permet d'écrire indifféremment le code en JavaScript ES5, 6 ou 7 et de compiler le tout dans une version compatible tous navigateurs.
 
@@ -85,6 +92,22 @@ La librairie [Bourbon](http://bourbon.io/) est intégrée au projet. N'hésitez 
 Pour les icônes, la police [ionicons](http://ionicons.com/) est présente.
 
 
+## Aller plus loin
+
+Pour ceux qui souhaiteraient ajouter de la logique au projet, voici plusieurs fonctionnalités avancées que vous êtes libres de mettre en place. **Cela permettra de mettre en valeur votre niveau technique, mais ne sera pas pénalisant si vous ne le faites pas.**
+
+> Les développements afférent pouvant s'avérer très chronophages, nous vous déconseillons de chercher à tout réaliser. Choisissez la ou les fonctionnalités sur lesquelles vous vous sentez le plus à l'aise et poussez l'idée le plus loin possible.
+
+1. **Récupération de données dynamiques pour alimenter l'article.** Vous trouverez dans `/src/static/` un [flux JSON type](https://github.com/archriss/archriss-test-react/blob/master/src/static/flux_type-articles.json) que vous pourrez modifier, adapter et héberger en ligne à cet effet. L'utilisation des [async/await](https://ponyfoo.com/articles/understanding-javascript-async-await) et le passage du titre de l'article dans le header sont un plus.
+
+2. **Intégration de plusieurs articles dans un swiper.** L'idée est d'intégrer le plugin [Swiper](https://github.com/nolimits4web/Swiper) afin de pouvoir naviguer par glissé latéral d'un article à l'autre. Le plugin devra être ajouté sous la forme un composant React réutilisable facilement. Nous serons sensibles à toutes les optimisations auxquelles vous pourrez penser (pré-chargement des images à n-1/n+1, récupération différenciée de la donnée de contenu d'article, récupération du titre dans le header, etc.). Vous pouvez tout à fait travailler sur de la donnée locale statique si vous ne travaillez pas sur le point n° 1.
+
+3. **Intégration d'un système de navigation basique.** Le point d'entrée de l'application serait dans ce cas une liste d'articles. Il s'agirait alors, au clic de l'utilisateur sur un item, d'ouvrir l'article correspondant (au sein d'un swiper si le point n° 2 est traité). La gestion des routes dans la structure proposée se fait dans:
+  * `/src/main.js`
+  * `/src/routes/`
+  * `/src/components/AppContainer.js`
+
+
 ## Critères de notation
 
 * Compréhension de la structure et de l'utilisation des composants React
@@ -93,6 +116,7 @@ Pour les icônes, la police [ionicons](http://ionicons.com/) est présente.
 * Qualité du layout responsive
 * Utilisation de flexbox pour le layout
 * Utilisation du JavaScript ES6/7
+* Mise en place et maîtrise de fonctionnalités avancées
 * Pas de recours à jQuery ou à tout autre librairie agissant sur le DOM
 * Connaissance du protocole de travail avec Git
 * Autonomie
