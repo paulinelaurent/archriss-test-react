@@ -46,20 +46,29 @@
 		@include flex-direction(row);
 		@include align-items(center);
 		color: rgba($color-white, .5);
-		line-height: 35px;
 		
 		&-prev, &-next {
 			cursor: pointer;
 			font-weight: 700;
-    		@include font-size-fixed(18px);
-			margin: 0 1em;
+    		@include font-size-fixed(22px);
+			width: $header-height;
+			height: $header-height;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include transition(background-color .3s ease);
+			
+			&:hover {
+				background-color: rgba($color-yellow, .55);
+			}
 		}
 
 		&-number {
 			color: $color-white;
 			@include font-size-fixed(16px);
 			align-self: flex-start;
-    		line-height: 25px;
+    		line-height: 35px;
+			margin-left: 1em;
 				
 			&::after {
 				content: '';
@@ -77,7 +86,8 @@
 		&-total {
 			@include font-size-fixed(12px);
 			align-self: flex-end;
-    		line-height: 25px;
+    		line-height: 35px;
+			margin-right: 1em;
 		}
 	}
 }
