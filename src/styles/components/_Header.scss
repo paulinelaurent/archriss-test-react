@@ -1,36 +1,83 @@
 .Header {
     @include display(flex);
     @include align-items(center);
+	@include justify-content(space-between);
     height: $header-height;
+	
+	&--main {
+		@include display(flex);
+		@include flex-direction(row);
+		@include align-items(center);
 
-    &--btn-close {
-        cursor: pointer;
+		&-btn-close {
+			cursor: pointer;
 
-        @include display(flex);
-        @include align-items(center);
-        @include justify-content(center);
-        width: $header-height;
-        height: $header-height;
+			@include display(flex);
+			@include align-items(center);
+			@include justify-content(center);
+			width: $header-height;
+			height: $header-height;
 
-        @include transition(background-color .3s ease);
+			@include transition(background-color .3s ease);
 
-        &:hover {
-            background-color: rgba($color-yellow, .55);
-        }
+			&:hover {
+				background-color: rgba($color-yellow, .55);
+			}
 
-        &::before {
-            color: rgba($color-white, .5);
-            @include font-size-fixed(22px);
-        }
-    }
+			&::before {
+				color: rgba($color-white, .5);
+				@include font-size-fixed(22px);
+			}
+		}
 
-    &--title {
-        margin-left: 12px;
+		&-title {
+			margin-left: 12px;
 
-        color: $color-white;
-        @include font-title;
-        @include font-size-fixed(12px);
-        letter-spacing: .075em;
-        text-transform: uppercase;
-    }
+			color: $color-white;
+			@include font-title;
+			@include font-size-fixed(12px);
+			letter-spacing: .075em;
+			text-transform: uppercase;
+		}
+	}
+	
+	&--TopNav {	
+		@include display(flex);
+		@include flex-direction(row);
+		@include align-items(center);
+		color: rgba($color-white, .5);
+		line-height: 35px;
+		
+		&-prev, &-next {
+			cursor: pointer;
+			font-weight: 700;
+    		@include font-size-fixed(18px);
+			margin: 0 1em;
+		}
+
+		&-number {
+			color: $color-white;
+			@include font-size-fixed(16px);
+			align-self: flex-start;
+    		line-height: 25px;
+				
+			&::after {
+				content: '';
+				display: block;
+				position: relative;
+				left: 10px;
+				top: -8px;
+				width: 35px;
+				height: 1px;
+				background-color: rgba($color-white, .5);
+				@include rotate(310deg);
+			}
+		}
+		
+		&-total {
+			@include font-size-fixed(12px);
+			align-self: flex-end;
+    		line-height: 25px;
+		}
+	}
 }
