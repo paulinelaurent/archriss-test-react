@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-// import lib
 
 export default class ArticleContent extends Component {
 
@@ -13,10 +12,6 @@ export default class ArticleContent extends Component {
     summary: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired
   }
-  
-//  date () {
-//	  
-//  }
 
   render () {
     const { category, thumbnail, location, startDate, title, subtitle, summary, content } = this.props;

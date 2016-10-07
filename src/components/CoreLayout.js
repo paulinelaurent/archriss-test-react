@@ -1,6 +1,7 @@
 import React from 'react'
 import ArticleContent from './ArticleContent'
 import Header from './Header'
+import SubNav from './SubNav'
 import '../styles/main.scss'
 
 export const CoreLayout = ({ children }) => (
@@ -8,6 +9,7 @@ export const CoreLayout = ({ children }) => (
     <Header />
     <div className='CoreLayout--viewport'>
       <div className='CoreLayout--background'>
+		<SubNav />
         <ArticleContent
           category='Culture'
           thumbnail='../public/ballerina.jpeg'
