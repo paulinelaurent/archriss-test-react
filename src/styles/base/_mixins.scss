@@ -48,7 +48,7 @@
     transform: rotate($deg);
 }
 
-// Boredr radius
+// Border radius
 @mixin border-radius($radius) {
 	border-radius: ($radius);
 	-moz-border-radius: ($radius);

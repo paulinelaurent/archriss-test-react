@@ -1,15 +1,25 @@
 .ArticleContent {
+	margin-top: 250px;
 
     &--category {
         color: $color-white;
 		@include font-title;
         text-transform: lowercase;
-		transform: rotate(270deg);
+		@include rotate(270deg);
 		position: absolute;
 		left: -52px;
-		font-size: 1.5em;
-		top: 100px;
+		@include font-size(24px);
+		top: 340px;
     }
+	
+	&--thumbnail {
+		height: 280px;
+		width: calc(100% + 20px);
+		left: -10px;
+		position: absolute;
+		top: -30px;
+		background-size: cover;
+	}
 	
     &--location {
 		text-align: center; 
@@ -34,11 +44,36 @@
 		@include display(flex);
 		flex-direction: column;
 	
-		&--startDate {
-			margin-right: 1em;
+		.ArticleDate {
+			margin-bottom: 20px;
+			
+			&--year {
+				@include rotate(270deg);
+				color: $color-gray-light;
+				position: absolute;
+				transform-origin: top right;
+				left: 0;
+				line-height: 0;
+			}
+			
+			&--day {
+				@include font-size(33px);
+				margin-left: 15px;
+				display: block;
+				
+				line-height: 0.7em;
+			}
+			
+			&--month {
+				line-height: 0.7em;
+				text-transform: uppercase;
+				@include font-size(11px);
+				margin-left: 15px;
+			}
 			
 			@media screen and (min-width: 380px) {
 				flex-grow: 1;
+				margin-right: 1em;
 			}
 		}
 
@@ -78,15 +113,20 @@
 			padding-right: .1em;
 		}
     }
+	
+	&--imgContent {
+		height: 280px;
+		width: calc(100% + 20px);
+		left: -10px;
+		position: absolute;
+		background-size: cover;
+	}
 
     &--content {
+		margin-top: 320px;
         
 		&h1, h2, h3, h4, h5, h6 {
 			text-transform: uppercase;
 		}
-		
-		&img {
-			margin-bottom: 1em;
-		}
-    }
+    }	
 }

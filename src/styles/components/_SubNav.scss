@@ -1,11 +1,13 @@
 .SubNav {
 	position: absolute;
-    right: -15px;
+    right: -20px;
+    z-index: 9;
+    top: 104px;
 	
 	div {
 		cursor: pointer;
-		width: $header-height;
-		height: $header-height;
+		width: 45px;
+		height: 45px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
